@@ -1,0 +1,284 @@
+html, body {
+	width:100%;
+	height:100%
+}
+
+body {
+	background-color: #061432;
+	padding: 0;
+	margin: 0;
+	font-family: "San Francisco Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.leaflet-container {
+	font-family: "San Francisco Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column wrap;
+	align-content: center;
+}
+
+#mapid {
+	width: 1024px;
+	height: 100%;
+}
+
+/* style for filters */
+.filters {
+	z-index: 1;
+	background: rgb(13, 32, 72);
+	margin: 1rem 1rem 0 1rem;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 350px;
+	color: #fff;
+	height: 100%;
+}
+
+header h1 {
+	font-size: 1.5em;
+	margin-bottom: 4px;
+}
+
+header p {
+	font-size: 0.9em;
+	color: #ddd;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+
+.search {
+	width:100%;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.search input::placeholder {
+	color: #ddd;
+}
+
+.search input {
+    width: 100%;
+    line-height: 2;
+    font-size: 1em;
+    background-color: rgba(255,255,255,0.1);
+    padding-left: 1em;
+    padding-right: 1em;
+	border: 1px solid rgba(120, 130, 140, 0.13);
+	color: #ddd;
+}
+
+.search #clear-search {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: none;
+}
+
+.year-label {
+	font-size: 1em;
+}
+
+.filter {
+	background-color: rgba(255,255,255,0.1);
+	padding: 15px;
+	overflow: auto;
+}
+
+.filter label {
+	margin-right: 15px;
+}
+
+.type, .seasonality{
+	margin-top: 15px;
+}
+
+.checkbox-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+.type .checkbox-container {
+	margin-top:15px;
+	height: 70px;
+}
+
+.seasonality .checkbox-container {
+	height: 20px;
+	margin-top: 10px;
+}
+
+.filters {
+	position: relative;
+	display: flex;
+	flex-direction: column
+}
+
+footer {
+	margin-top: auto;
+}
+
+footer p {
+	color: #ddd;
+	font-size: 0.8em;
+	margin-top: 20px
+}
+a {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+    text-decoration: none;
+}
+
+/* style for leaflet popup */
+.leaflet-popup-content ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.leaflet-popup-content span {
+	font-weight: bold;
+}
+
+#mapid .leaflet-popup-content-wrapper {
+	border-radius: 3px;
+	
+}
+
+#mapid .leaflet-popup-tip,  #mapid .leaflet-popup-content-wrapper{
+	box-shadow: 0 3px 3px rgba(0,0,0,0.1)
+}
+
+.site-img img {
+	width: 100%;
+}
+
+/* style for small screen */
+
+@media only screen and (max-width:1404px) {
+	container {
+		display: block;
+		position: relative;
+	}
+
+	.filters {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		float: right;
+	}
+
+	#mapid {
+		z-index: 0;
+		position: absolute;
+		left: 0;
+		top: 0
+	}
+}
+
+
+/* style for the slider, generated in http://www.cssportal.com/style-input-range/ */
+
+input[type=range] {
+	height: 22px;
+	-webkit-appearance: none;
+	margin: 10px 0 0 0;
+	width: 100%;
+	background:transparent;
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+input[type='range']::-moz-focus-outer { 
+	border: 0; 
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #89BAE0;
+	border-radius: 5px;
+	border: 0px solid #010101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 0px 0px #000031;
+	border: 0px solid #00001E;
+	height: 16px;
+	width: 16px;
+	border-radius: 16px;
+	background: #FFFFFF;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -5.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #89BAE0;
+}
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #89BAE0;
+	border-radius: 5px;
+	border: 0px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+	box-shadow: 0px 0px 0px #000031;
+	border: 0px solid #00001E;
+	height: 16px;
+	width: 16px;
+	border-radius: 16px;
+	background: #FFFFFF;
+	cursor: pointer;
+}
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+	background: #89BAE0;
+	border: 0px solid #010101;
+	border-radius: 10px;
+	box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+	background: #89BAE0;
+	border: 0px solid #010101;
+	border-radius: 10px;
+	box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+	margin-top: 1px;
+	box-shadow: 0px 0px 0px #000031;
+	border: 0px solid #00001E;
+	height: 16px;
+	width: 16px;
+	border-radius: 16px;
+	background: #FFFFFF;
+	cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+	background: #89BAE0;
+}
+input[type=range]:focus::-ms-fill-upper {
+	background: #89BAE0;
+}
